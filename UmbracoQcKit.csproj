@@ -4,8 +4,15 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Include="App_Plugins\BlockGridPreviews\navigationgroup.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Plugins\BlockGridPreviews\package.manifest" />
+  </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Our.Umbraco.TagHelpers" Version="1.2.0" />
     <PackageReference Include="Umbraco.Cms" Version="13.5.1" />
   </ItemGroup>
 

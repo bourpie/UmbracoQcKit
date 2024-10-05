@@ -19,16 +19,16 @@ using Umbraco.Extensions;
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	// Mixin Content Type with alias "contentProperties"
-	/// <summary>Content Properties</summary>
+	/// <summary>Contenu principale</summary>
 	public partial interface IContentProperties : IPublishedElement
 	{
-		/// <summary>Main Content</summary>
+		/// <summary>Contenu</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.1+2e068bb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		global::Umbraco.Cms.Core.Models.Blocks.BlockGridModel MainContent { get; }
 	}
 
-	/// <summary>Content Properties</summary>
+	/// <summary>Contenu principale</summary>
 	[PublishedModel("contentProperties")]
 	public partial class ContentProperties : PublishedElementModel, IContentProperties
 	{
@@ -60,14 +60,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Main Content
+		/// Contenu
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.1+2e068bb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("mainContent")]
 		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockGridModel MainContent => GetMainContent(this, _publishedValueFallback);
 
-		/// <summary>Static getter for Main Content</summary>
+		/// <summary>Static getter for Contenu</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.1+2e068bb")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		public static global::Umbraco.Cms.Core.Models.Blocks.BlockGridModel GetMainContent(IContentProperties that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockGridModel>(publishedValueFallback, "mainContent");

@@ -8,9 +8,9 @@
     ViewData["hasContainer"] = "true";
 }
 
-<section class="page-section bg-primary text-white mb-0" id="about">
+<section class="bg-primary mb-0 py-5 text-bg-primary">
     <div class="container">
-        <div class="text-white">
+        <div class="mb-5">
             <!-- About Section Heading-->
             @await Html.GetBlockGridItemAreaHtmlAsync(Model.Areas.ElementAt(TITLE_AREA))
         </div>
@@ -63,13 +63,26 @@
                 {
                     <!-- About Section Button-->
                     <div class="text-center mt-4">
-                        <a class="btn btn-xl btn-outline-light" href="@iconLink.Link.Url" target="@iconLink.Link.Target">
-                            @* <i class="fas fa-download me-2"></i> *@
+@*                         <a class="btn btn-xl btn-outline-light" href="@iconLink.Link.Url" target="@iconLink.Link.Target">
                             <span class="icon-link">
                                 <our-svg media-item="iconLink.Icon" class="svg-inline--fa fa-fw text-white"></our-svg>
                             </span>
                             @iconLink.Link.Name
-                        </a>
+                        </a> *@
+
+                        <qc-bouton 
+                            icon-position="@(iconLink.PositionDeLicone ? "right" : "left")" 
+                            href="@iconLink?.Link?.Url" 
+                            label="@iconLink?.Link?.Name" 
+                            size="compact" 
+                            type="tertiaire"
+                            @if (!string.IsNullOrEmpty(iconLink?.Icon)) 
+                            {
+                                <text> icon="@iconLink.Icon"</text>
+                            }>
+                        </qc-bouton>
+
+
                     </div>
                 }
             }

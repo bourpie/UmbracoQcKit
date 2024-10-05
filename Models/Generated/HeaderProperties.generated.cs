@@ -19,16 +19,16 @@ using Umbraco.Extensions;
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	// Mixin Content Type with alias "headerProperties"
-	/// <summary>Header Properties</summary>
+	/// <summary>Entête</summary>
 	public partial interface IHeaderProperties : IPublishedElement
 	{
-		/// <summary>Header Content</summary>
+		/// <summary>Entête</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.1+2e068bb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		global::Umbraco.Cms.Core.Models.Blocks.BlockGridModel HeaderContent { get; }
 	}
 
-	/// <summary>Header Properties</summary>
+	/// <summary>Entête</summary>
 	[PublishedModel("headerProperties")]
 	public partial class HeaderProperties : PublishedElementModel, IHeaderProperties
 	{
@@ -60,14 +60,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Header Content
+		/// Entête
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.1+2e068bb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("headerContent")]
 		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockGridModel HeaderContent => GetHeaderContent(this, _publishedValueFallback);
 
-		/// <summary>Static getter for Header Content</summary>
+		/// <summary>Static getter for Entête</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.1+2e068bb")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		public static global::Umbraco.Cms.Core.Models.Blocks.BlockGridModel GetHeaderContent(IHeaderProperties that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockGridModel>(publishedValueFallback, "headerContent");

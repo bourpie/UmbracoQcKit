@@ -18,7 +18,7 @@ using Umbraco.Extensions;
 
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
-	/// <summary>Site Settings</summary>
+	/// <summary>Paramètres du site</summary>
 	[PublishedModel("siteSettings")]
 	public partial class SiteSettings : PublishedContentModel, IFooterProperties, IMainNavigationProperties, ISiteSettingsProperties
 	{
@@ -50,7 +50,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Footer Content
+		/// Pied de page
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.1+2e068bb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
@@ -58,7 +58,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockGridModel FooterContent => global::Umbraco.Cms.Web.Common.PublishedModels.FooterProperties.GetFooterContent(this, _publishedValueFallback);
 
 		///<summary>
-		/// Main Navigation
+		/// Navigation
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.1+2e068bb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
@@ -66,7 +66,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockGridModel MainNavigation => global::Umbraco.Cms.Web.Common.PublishedModels.MainNavigationProperties.GetMainNavigation(this, _publishedValueFallback);
 
 		///<summary>
-		/// Site Name
+		/// Nom du site
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.1+2e068bb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]

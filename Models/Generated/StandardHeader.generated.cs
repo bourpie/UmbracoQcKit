@@ -18,7 +18,7 @@ using Umbraco.Extensions;
 
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
-	/// <summary>Standard Header</summary>
+	/// <summary>Entête</summary>
 	[PublishedModel("standardHeader")]
 	public partial class StandardHeader : PublishedElementModel
 	{

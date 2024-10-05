@@ -1,3 +1,8 @@
+:root {
+    --bs-primary-rgb: 9, 87, 151;
+}
+
+
 body {
     display: flex;
     min-height: 100vh;
@@ -7,6 +12,10 @@ body {
 qc-footer {
     margin-top: auto;
 }
+
+/**
+    Sidebar
+*/
 
 .menu-secondaire {
     margin-top: 5.5rem;

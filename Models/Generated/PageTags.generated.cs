@@ -18,7 +18,7 @@ using Umbraco.Extensions;
 
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
-	/// <summary>Page Tags</summary>
+	/// <summary>Liste de mots-clés</summary>
 	[PublishedModel("pageTags")]
 	public partial class PageTags : PublishedContentModel
 	{

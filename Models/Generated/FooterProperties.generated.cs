@@ -19,16 +19,16 @@ using Umbraco.Extensions;
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	// Mixin Content Type with alias "footerProperties"
-	/// <summary>Footer Properties</summary>
+	/// <summary>Pied de page</summary>
 	public partial interface IFooterProperties : IPublishedElement
 	{
-		/// <summary>Footer Content</summary>
+		/// <summary>Pied de page</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.1+2e068bb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		global::Umbraco.Cms.Core.Models.Blocks.BlockGridModel FooterContent { get; }
 	}
 
-	/// <summary>Footer Properties</summary>
+	/// <summary>Pied de page</summary>
 	[PublishedModel("footerProperties")]
 	public partial class FooterProperties : PublishedElementModel, IFooterProperties
 	{
@@ -60,14 +60,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Footer Content
+		/// Pied de page
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.1+2e068bb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("footerContent")]
 		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockGridModel FooterContent => GetFooterContent(this, _publishedValueFallback);
 
-		/// <summary>Static getter for Footer Content</summary>
+		/// <summary>Static getter for Pied de page</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.1+2e068bb")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		public static global::Umbraco.Cms.Core.Models.Blocks.BlockGridModel GetFooterContent(IFooterProperties that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockGridModel>(publishedValueFallback, "footerContent");

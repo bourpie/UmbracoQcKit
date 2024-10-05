@@ -18,7 +18,7 @@ using Umbraco.Extensions;
 
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
-	/// <summary>Content page</summary>
+	/// <summary>Page</summary>
 	[PublishedModel("contentPage")]
 	public partial class ContentPage : PublishedContentModel, IContentProperties, IHeaderProperties, ISEoproperties, ITaggingProperties, IVisibilityProperties
 	{
@@ -50,7 +50,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Main Content
+		/// Contenu
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.1+2e068bb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
@@ -58,7 +58,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockGridModel MainContent => global::Umbraco.Cms.Web.Common.PublishedModels.ContentProperties.GetMainContent(this, _publishedValueFallback);
 
 		///<summary>
-		/// Header Content
+		/// Entête
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.1+2e068bb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
@@ -96,7 +96,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string MetaTitle => global::Umbraco.Cms.Web.Common.PublishedModels.SEoproperties.GetMetaTitle(this, _publishedValueFallback);
 
 		///<summary>
-		/// Page Tags
+		/// Mots-clés
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.1+2e068bb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
@@ -104,7 +104,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent> PageTags => global::Umbraco.Cms.Web.Common.PublishedModels.TaggingProperties.GetPageTags(this, _publishedValueFallback);
 
 		///<summary>
-		/// Hide: Rendre invisible sur le site et à la recherche
+		/// Cacher: Rendre invisible sur le site et à la recherche
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.1+2e068bb")]
 		[ImplementPropertyType("umbracoNaviHide")]

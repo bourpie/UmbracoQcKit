@@ -19,16 +19,16 @@ using Umbraco.Extensions;
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	// Mixin Content Type with alias "taggingProperties"
-	/// <summary>Tagging Properties</summary>
+	/// <summary>Mots-clés</summary>
 	public partial interface ITaggingProperties : IPublishedElement
 	{
-		/// <summary>Page Tags</summary>
+		/// <summary>Mots-clés</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.1+2e068bb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent> PageTags { get; }
 	}
 
-	/// <summary>Tagging Properties</summary>
+	/// <summary>Mots-clés</summary>
 	[PublishedModel("taggingProperties")]
 	public partial class TaggingProperties : PublishedElementModel, ITaggingProperties
 	{
@@ -60,14 +60,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Page Tags
+		/// Mots-clés
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.1+2e068bb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("pageTags")]
 		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent> PageTags => GetPageTags(this, _publishedValueFallback);
 
-		/// <summary>Static getter for Page Tags</summary>
+		/// <summary>Static getter for Mots-clés</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.1+2e068bb")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		public static global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent> GetPageTags(ITaggingProperties that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent>>(publishedValueFallback, "pageTags");

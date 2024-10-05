@@ -18,7 +18,7 @@ using Umbraco.Extensions;
 
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
-	/// <summary>Search Page</summary>
+	/// <summary>Recherche</summary>
 	[PublishedModel("searchPage")]
 	public partial class SearchPage : PublishedContentModel, ISEoproperties, ITaggingProperties, IVisibilityProperties
 	{
@@ -80,7 +80,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string MetaTitle => global::Umbraco.Cms.Web.Common.PublishedModels.SEoproperties.GetMetaTitle(this, _publishedValueFallback);
 
 		///<summary>
-		/// Page Tags
+		/// Mots-clés
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.1+2e068bb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
@@ -88,7 +88,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent> PageTags => global::Umbraco.Cms.Web.Common.PublishedModels.TaggingProperties.GetPageTags(this, _publishedValueFallback);
 
 		///<summary>
-		/// Hide: Rendre invisible sur le site et à la recherche
+		/// Cacher: Rendre invisible sur le site et à la recherche
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.1+2e068bb")]
 		[ImplementPropertyType("umbracoNaviHide")]

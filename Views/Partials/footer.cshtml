@@ -5,15 +5,15 @@
     if (siteSettings?.FooterContent is null) return;
 }
 
-<!-- Footer-->
-<footer class="footer text-center">
-    <div class="container">
-        <div class="row">
-            @await Html.GetBlockGridItemsHtmlAsync(siteSettings.FooterContent)
-        </div>
+<qc-footer site-url="https://www.quebec.ca"
+           site-nom="Gouvernement du Qu&eacute;bec">
+    <div slot="liens-principaux">
+        @await Html.GetBlockGridItemsHtmlAsync(siteSettings.FooterContent)
     </div>
-</footer>
-<!-- Copyright Section-->
-<div class="copyright py-4 text-center text-white">
-    <div class="container"><small>Copyright &copy; @Umbraco.GetDictionaryValue("CopyrightStatement") @DateTime.Now.Year</small></div>
-</div>
+    <div slot="liens-secondaires">
+        @* @Html.GetBlockListHtml(preferences, "PiedLiensSecondaires") *@
+    </div>
+    <div slot="copyright">
+        Copyright &copy; @Umbraco.GetDictionaryValue("CopyrightStatement") @DateTime.Now.Year
+    </div>
+</qc-footer>

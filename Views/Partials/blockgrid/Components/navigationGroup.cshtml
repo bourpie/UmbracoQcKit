@@ -4,11 +4,11 @@
             && (!string.IsNullOrWhiteSpace(Model.Content.Title) || Model.Content.Link != null))
 
 {
-    <li class="nav-item mx-0 mx-lg-1 dropdown">
+    <li>
         @if (Model.Content.Link != null)
 
         {
-            <a class="nav-link py-3 px-0 px-lg-3 rounded dropdown-toggle" target="@Model.Content.Link.Target" href="@Model.Content.Link.Url" id="@Model.Content.Key.ToString("N")" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a target="@Model.Content.Link.Target" href="@Model.Content.Link.Url">
                 @Model.Content.Link.Name
             </a>
         }
@@ -16,15 +16,19 @@
         else if (!string.IsNullOrWhiteSpace(Model.Content.Title))
 
         {
-            <a class="nav-link py-3 px-0 px-lg-3 rounded dropdown-toggle" href="#" id="@Model.Content.Key.ToString("N")" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a href="#">
                 @Model.Content.Title
             </a>
+
+            <button>
+                <span class="lnr lnr-chevron-down"></span>
+            </button>
         }
-        <ul class="dropdown-menu" aria-labelledby="@Model.Content.Key.ToString("N")">
+        <ul>
             @foreach (var childLink in Model.Content.ChildLinks)
 
             {
-                <li><a class="dropdown-item" target="@childLink.Target" href="@childLink.Url">@childLink.Name</a></li>
+                <li><a target="@childLink.Target" href="@childLink.Url">@childLink.Name</a></li>
             }
         </ul>
     </li>
@@ -33,5 +37,5 @@
 else
 
 {
-    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" target="@Model.Content.Link.Target" href="@Model.Content.Link.Url">@Model.Content.Link.Name</a></li>
+    <li><a target="@Model.Content.Link.Target" href="@Model.Content.Link.Url">@Model.Content.Link.Name</a></li>
 }

@@ -5,18 +5,21 @@
     if (siteSettings is null) return;
 }
 
-<!-- Navigation-->
-<nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-    <div class="container">
-        <a class="navbar-brand" href="#page-top">@siteSettings.SiteName</a>
-        <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            @Umbraco.GetDictionaryValue("Menu", "Menu")
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ms-auto">
-                @await Html.GetBlockGridHtmlAsync(siteSettings, "mainNavigation")
-            </ul>
-        </div>
-    </div>
-</nav>
+<qc-header titre="@siteSettings.SiteName"
+  btnlabel="Rechercher"
+  contacturl="/contact"
+  contactlabel="Nous joindre"
+  recherche="non"
+  langueurl="/en"
+  languelabel="English"
+  action="/search"
+  name="search"
+  query=""
+>
+</qc-header>
+
+<qc-navigation>
+    <ul>
+        @await Html.GetBlockGridHtmlAsync(siteSettings, "mainNavigation")
+    </ul>
+</qc-navigation>

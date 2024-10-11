@@ -1,3 +1,5 @@
+using UmbracoQcKit.Configuration;
+
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.CreateUmbracoBuilder()
@@ -6,6 +8,9 @@ builder.CreateUmbracoBuilder()
     .AddDeliveryApi()
     .AddComposers()
     .Build();
+
+builder.Services.Configure<UmbracoQcKitConfig>(
+    builder.Configuration.GetSection(UmbracoQcKitConfig.SectionName));
 
 WebApplication app = builder.Build();
 

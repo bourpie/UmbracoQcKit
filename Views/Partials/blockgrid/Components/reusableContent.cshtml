@@ -3,5 +3,12 @@
 @{
     if (Model?.Content?.ContentItem is null) return;
 }
-
-@await Html.GetBlockGridHtmlAsync(Model.Content.ContentItem, "mainContent")
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                @await Html.GetBlockGridHtmlAsync(Model.Content.ContentItem, "mainContent")
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,6 +1,4 @@
-﻿using Umbraco.Cms.Core.Models;
-
-namespace UmbracoQcKit.Extensions;
+﻿namespace UmbracoQcKit.Extensions;
 
 public static class MediaWithCropsExtensions
 {

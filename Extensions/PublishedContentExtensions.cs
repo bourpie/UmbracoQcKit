@@ -7,8 +7,8 @@ public static class PublishedContentExtensions
         return publishedContent.AncestorOrSelf<Home>();
     }
 
-    public static SiteSettings? GetSiteSettings(this IPublishedContent publishedContent) 
-    { 
+    public static SiteSettings? GetSiteSettings(this IPublishedContent publishedContent)
+    {
         var homepage = GetHomePage(publishedContent);
         if (homepage == null) return null;
 

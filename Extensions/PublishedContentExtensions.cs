@@ -1,4 +1,6 @@
-﻿namespace UmbracoQcKit.Extensions;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+
+namespace UmbracoQcKit.Extensions;
 
 public static class PublishedContentExtensions
 {
@@ -29,5 +31,23 @@ public static class PublishedContentExtensions
         var siteSettings = homePage.GetSiteSettings();
         if (siteSettings == null) return null;
         return siteSettings?.SiteName ?? null;
+    }
+
+    public static IEnumerable<SelectListItem>? GetPageTagsSelectList(this IPublishedContent publishedContent)
+    {
+        IEnumerable<SelectListItem>? allTags = null;
+
+        var siteSettings = publishedContent.GetSiteSettings();
+
+        if (siteSettings == null) return null;
+
+        var pageTagsContainer = siteSettings.FirstChildOfType(PageTags.ModelTypeAlias);
+        if (pageTagsContainer?.Children != null && pageTagsContainer.Children.Any())
+        {
+            var pageTags = pageTagsContainer.Children.Select(x => x as PageTag).Where(y => y != null);
+            allTags = pageTags.Select(x => new SelectListItem() { Text = x!.Name, Value = x.TagAlias });
+        }
+
+        return allTags;
     }
 }

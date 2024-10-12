@@ -5,21 +5,21 @@
   for (const i of document.querySelectorAll('link[rel="modulepreload"]'))
     s(i);
   new MutationObserver((i) => {
-    for (const c of i)
-      if (c.type === "childList")
-        for (const n of c.addedNodes)
+    for (const r of i)
+      if (r.type === "childList")
+        for (const n of r.addedNodes)
           n.tagName === "LINK" && n.rel === "modulepreload" && s(n);
   }).observe(document, { childList: !0, subtree: !0 });
   function t(i) {
-    const c = {};
-    return i.integrity && (c.integrity = i.integrity), i.referrerPolicy && (c.referrerPolicy = i.referrerPolicy), i.crossOrigin === "use-credentials" ? c.credentials = "include" : i.crossOrigin === "anonymous" ? c.credentials = "omit" : c.credentials = "same-origin", c;
+    const r = {};
+    return i.integrity && (r.integrity = i.integrity), i.referrerPolicy && (r.referrerPolicy = i.referrerPolicy), i.crossOrigin === "use-credentials" ? r.credentials = "include" : i.crossOrigin === "anonymous" ? r.credentials = "omit" : r.credentials = "same-origin", r;
   }
   function s(i) {
     if (i.ep)
       return;
     i.ep = !0;
-    const c = t(i);
-    fetch(i.href, c);
+    const r = t(i);
+    fetch(i.href, r);
   }
 })();
 class h extends HTMLElement {
@@ -129,9 +129,9 @@ class u extends HTMLElement {
 customElements.get("qc-alerte") || customElements.define("qc-alerte", u);
 const d = "data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2052.67%2052.21'%3e%3cdefs%3e%3cstyle%3e.cls-1{fill:%23fff;}%3c/style%3e%3c/defs%3e%3ctitle%3eFichier%201%3c/title%3e%3cg%20id='Calque_2'%20data-name='Calque%202'%3e%3cg%20id='Calque_1-2'%20data-name='Calque%201'%3e%3cpath%20class='cls-1'%20d='M52.67,47.81l-15-15a20.77,20.77,0,1,0-4.32,4.46L48.28,52.21ZM20.78,35.36A14.41,14.41,0,1,1,35.19,21h0A14.43,14.43,0,0,1,20.78,35.36Z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e", g = "data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2052.68%2052.23'%3e%3cdefs%3e%3cstyle%3e.cls-1{fill:%23223654;}%3c/style%3e%3c/defs%3e%3ctitle%3eFichier%201%3c/title%3e%3cg%20id='Calque_2'%20data-name='Calque%202'%3e%3cg%20id='Calque_1-2'%20data-name='Calque%201'%3e%3cg%20id='Calque_2-2'%20data-name='Calque%202'%3e%3cg%20id='Calque_1-2-2'%20data-name='Calque%201-2'%3e%3cpath%20class='cls-1'%20d='M52.68,47.83l-15-15a20.77,20.77,0,1,0-4.32,4.46L48.29,52.23ZM20.79,35.38A14.41,14.41,0,1,1,35.2,21V21h0A14.43,14.43,0,0,1,20.79,35.38Z'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e";
 function p() {
-  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function(r) {
+  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function(c) {
     const e = Math.random() * 16 | 0;
-    return (r === "x" ? e : e & 3 | 8).toString(16);
+    return (c === "x" ? e : e & 3 | 8).toString(16);
   });
 }
 class m extends HTMLElement {
@@ -212,7 +212,7 @@ customElements.get("qc-recherche") || customElements.define("qc-recherche", m);
 const b = "data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20463.55%2091'%3e%3cdefs%3e%3cstyle%3e.cls-1,.cls-2{fill:%23fff;}.cls-2{fill-rule:evenodd;}%3c/style%3e%3c/defs%3e%3ctitle%3eFichier%201%3c/title%3e%3cg%20id='Calque_2'%20data-name='Calque%202'%3e%3cg%20id='Signature'%3e%3cpath%20class='cls-1'%20d='M125.22,62.89V24.11h-.29c-1.38,1.27-6.48,1.37-8.64,1.37h-3.75v.31c4.33,2.66,3.74,6.59,3.74,11.48V53.68c0,8.21-8.06,14-14.56,14-8.56,0-12.11-6.08-12.11-15.89V24.11h-.3c-1.38,1.27-6.51,1.37-8.67,1.37H76.94v.32c4.33,2.66,3.74,6.58,3.74,11.47V53.63c0,15,6.49,22.08,18.1,22.08,6.89,0,14-2.44,17.51-8.28v7.08H129v-.32C124.63,71.74,125.22,67.79,125.22,62.89Z'/%3e%3cpath%20class='cls-1'%20d='M144.88,42.15c1.18-6.66,6.1-10.89,12.7-10.89,7.09,0,11.61,3.49,12.7,10.89Zm35.74,6.18c.39-13.68-8.77-24-22.16-24-14.66,0-24.6,10.64-24.6,25.4s11.51,26.21,28.25,26.21a33.26,33.26,0,0,0,13.58-2.64l4.93-10h-.3A24.65,24.65,0,0,1,164.17,69c-11.12,0-19.49-7.59-19.68-20.65Z'/%3e%3cpath%20class='cls-1'%20d='M188.42,1.58c2.36,0,7.17-.15,8.63-1.58h.29V67.17a30.3,30.3,0,0,0,8.12,1.27c10.75,0,16.92-7.53,16.92-18,0-10.28-4.8-18.23-14.67-18.23a15.91,15.91,0,0,0-8.22,2.33l5.28-9a19.53,19.53,0,0,1,6.95-1.17c11.15,0,20.63,9.68,20.63,24.2,0,16.63-11.25,27.39-29,27.39-6.65,0-13-1.18-17.85-1.92v-.33c3.25-1.49,3-5,3-8.51V16.33c0-4.91.59-11.77-3.64-14.43V1.58Z'/%3e%3cpath%20class='cls-1'%20d='M249.83,42.15c1.18-6.66,6.1-10.89,12.7-10.89,7.09,0,11.61,3.49,12.7,10.89Zm35.73,6.18c.4-13.68-8.76-24-22.15-24-14.66,0-24.6,10.64-24.6,25.4s11.51,26.21,28.24,26.21a33.27,33.27,0,0,0,13.59-2.64l4.92-10h-.29A24.65,24.65,0,0,1,269.12,69c-11.12,0-19.49-7.59-19.69-20.65Z'/%3e%3cpath%20class='cls-1'%20d='M329.59,36.49h-.3c-2.85-3.52-7.58-5.23-12-5.23-9.55,0-16.43,7.25-16.43,17.37,0,12.25,9.54,20.35,20.47,20.35a24.18,24.18,0,0,0,14.37-5.22h.3l-5.12,10.06a34.32,34.32,0,0,1-13,2.11c-15.15,0-27-10.68-27-24.53,0-18.32,13.22-27.08,28.09-27.08a45.37,45.37,0,0,1,10.63,1.26Z'/%3e%3cpath%20class='cls-2'%20d='M168.33,15.53V4.87c-6.45,2.89-12.44,8.3-16.44,13.56v4.15C161.47,16.13,168.33,15.83,168.33,15.53Z'/%3e%3cpath%20class='cls-1'%20d='M36.43,68.6c-14.87,0-25.21-16.77-25.21-31,0-.14,0-1.46,0-1.6.18-13.8,9.12-26.75,24.71-26.75,16.4,0,24.86,15.52,25,30.23V41C60.94,56.66,51.2,68.6,36.43,68.6ZM87.38,84.9c-11,1.79-21.53-1.66-32.74-14.49,10.83-5.44,17.53-19,17.53-31.55V37.29C72,15.77,55.8,1.56,36.53,1.56S.15,16.35,0,38V39.5C0,60.6,15.66,76.27,34.85,76.27a34.32,34.32,0,0,0,8.08-1.07C55.5,87,66.71,92,76.39,90.83c4.59-.55,9.45-2.38,12.36-6.16Z'/%3e%3cpath%20class='cls-1'%20d='M375.65,27.17c-3,.95-3-1.75-3-1.75,2.68.47,2.94-1.78,2.94-1.78h-5.35V21.12h2.54s-.43-3.36-2.92-3.36c-2.29,0-2.61,2.54-2.19,3.59-1.15.2-2.83-1.79-2.83-4.13a4.45,4.45,0,0,1,4.45-4.57c3.37,0,5.89,3.89,5.89,8.47h1a15.1,15.1,0,0,0-.24-4.22c-.72-3.17-2.3-5-2.33-7.19-.06-3.73,2.19-4.33,4-7.59,1.8,3.26,4.05,3.86,4,7.59,0,2.15-1.61,4-2.34,7.19a14.89,14.89,0,0,0-.23,4.22h1c0-4.58,2.53-8.47,5.9-8.47a4.45,4.45,0,0,1,4.45,4.57c0,2.34-1.68,4.33-2.83,4.13.42-1.05.1-3.59-2.2-3.59-2.48,0-2.91,3.36-2.91,3.36H385v2.52h-5.34s.26,2.25,2.94,1.78c0,0,0,2.7-3.05,1.75,0,0-.12,2.41-1.93,3.28C375.77,29.58,375.65,27.17,375.65,27.17ZM401.57,1.59h-48V31h48Z'/%3e%3cpath%20class='cls-1'%20d='M437.63,27.17c-3,.95-3.05-1.75-3.05-1.75,2.67.47,2.94-1.78,2.94-1.78h-5.34V21.12h2.53s-.43-3.36-2.92-3.36c-2.29,0-2.61,2.54-2.19,3.59-1.15.2-2.83-1.79-2.83-4.13a4.45,4.45,0,0,1,4.45-4.57c3.37,0,5.9,3.89,5.9,8.47h1a14.89,14.89,0,0,0-.23-4.22c-.73-3.17-2.3-5-2.34-7.19-.06-3.73,2.19-4.33,4-7.59,1.79,3.26,4.05,3.86,4,7.59,0,2.15-1.6,4-2.32,7.19a15.31,15.31,0,0,0-.25,4.22h1c0-4.58,2.52-8.47,5.89-8.47a4.45,4.45,0,0,1,4.45,4.57c0,2.34-1.68,4.33-2.83,4.13.42-1.05.1-3.59-2.19-3.59-2.49,0-2.92,3.36-2.92,3.36h2.53v2.52H441.6s.26,2.25,2.94,1.78c0,0,0,2.7-3.05,1.75,0,0-.12,2.41-1.93,3.28C437.75,29.58,437.63,27.17,437.63,27.17ZM463.55,1.59h-48V31h48Z'/%3e%3cpath%20class='cls-1'%20d='M375.65,70.63c-3,1-3-1.75-3-1.75,2.68.48,2.94-1.78,2.94-1.78h-5.35V64.58h2.54s-.43-3.36-2.92-3.36c-2.29,0-2.61,2.54-2.19,3.6-1.15.19-2.83-1.8-2.83-4.14a4.45,4.45,0,0,1,4.45-4.57c3.37,0,5.89,3.89,5.89,8.47h1a15.1,15.1,0,0,0-.24-4.22c-.72-3.16-2.3-5-2.33-7.18-.06-3.74,2.19-4.34,4-7.6,1.8,3.26,4.05,3.86,4,7.6,0,2.14-1.61,4-2.34,7.18a14.89,14.89,0,0,0-.23,4.22h1c0-4.58,2.53-8.47,5.9-8.47a4.45,4.45,0,0,1,4.45,4.57c0,2.34-1.68,4.33-2.83,4.14.42-1.06.1-3.6-2.2-3.6-2.48,0-2.91,3.36-2.91,3.36H385V67.1h-5.34s.26,2.26,2.94,1.78c0,0,0,2.7-3.05,1.75,0,0-.12,2.41-1.93,3.28C375.77,73,375.65,70.63,375.65,70.63Zm25.92-25.57h-48v29.4h48Z'/%3e%3cpath%20class='cls-1'%20d='M437.63,70.63c-3,1-3.05-1.75-3.05-1.75,2.67.48,2.94-1.78,2.94-1.78h-5.34V64.58h2.53s-.43-3.36-2.92-3.36c-2.29,0-2.61,2.54-2.19,3.6-1.15.19-2.83-1.8-2.83-4.14a4.45,4.45,0,0,1,4.45-4.57c3.37,0,5.9,3.89,5.9,8.47h1a14.89,14.89,0,0,0-.23-4.22c-.73-3.16-2.3-5-2.34-7.18-.06-3.74,2.19-4.34,4-7.6,1.79,3.26,4.05,3.86,4,7.6,0,2.14-1.6,4-2.32,7.18a15.31,15.31,0,0,0-.25,4.22h1c0-4.58,2.52-8.47,5.89-8.47a4.45,4.45,0,0,1,4.45,4.57c0,2.34-1.68,4.33-2.83,4.14.42-1.06.1-3.6-2.19-3.6-2.49,0-2.92,3.36-2.92,3.36h2.53V67.1H441.6s.26,2.26,2.94,1.78c0,0,0,2.7-3.05,1.75,0,0-.12,2.41-1.93,3.28C437.75,73,437.63,70.63,437.63,70.63Zm25.92-25.57h-48v29.4h48Z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e", v = "data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2052.67%2052.21'%3e%3cdefs%3e%3cstyle%3e.cls-1{fill:%23fff;}%3c/style%3e%3c/defs%3e%3ctitle%3eFichier%201%3c/title%3e%3cg%20id='Calque_2'%20data-name='Calque%202'%3e%3cg%20id='Calque_1-2'%20data-name='Calque%201'%3e%3cpath%20class='cls-1'%20d='M52.67,47.81l-15-15a20.77,20.77,0,1,0-4.32,4.46L48.28,52.21ZM20.78,35.36A14.41,14.41,0,1,1,35.19,21h0A14.43,14.43,0,0,1,20.78,35.36Z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e";
 class f extends HTMLElement {
   static get observedAttributes() {
-    return ["titre", "class", "btnlabel", "contacturl", "contactlabel", "recherche", "langueurl", "languelabel", "action", "name", "query"];
+    return ["titre", "class", "btnlabel", "contacturl", "contactlabel", "recherche", "langueurl", "languelabel", "action", "name", "query", "placeholder"];
   }
   constructor() {
     super(), this.render();
@@ -240,7 +240,7 @@ class f extends HTMLElement {
                         </ul>
                     </nav>
                 </div>
-                ${this.recherche === "oui" ? `<qc-recherche variant="dark" action="${this.action}" name="${this.name}" value="${this.query}"></qc-recherche>` : ""}
+                ${this.recherche === "oui" ? `<qc-recherche variant="dark" placeholder="${this.placeholder}" action="${this.action}" name="${this.name}" value="${this.query}"></qc-recherche>` : ""}
             </header>
         `;
   }
@@ -267,6 +267,9 @@ class f extends HTMLElement {
   }
   get languelabel() {
     return this.getAttribute("languelabel") || "English";
+  }
+  get placeholder() {
+    return this.getAttribute("placeholder");
   }
   // Modification ici pour gérer la langue dans l'action
   get action() {
@@ -544,16 +547,16 @@ class A extends HTMLElement {
   generateAnchors() {
     const e = [];
     return document.querySelectorAll(".tdm").forEach((s, i) => {
-      const c = s.getAttribute("tdm-titre") || s.textContent.trim(), n = `tdm-anchor-${i}`;
-      s.id = n, e.push(`<li><a href="#${n}" class="tdm-link">${c}</a></li>`);
+      const r = s.getAttribute("tdm-titre") || s.textContent.trim(), n = `tdm-anchor-${i}`;
+      s.id = n, e.push(`<li><a href="#${n}" class="tdm-link">${r}</a></li>`);
     }), e.join("");
   }
   setupAnchors() {
     this.querySelectorAll(".tdm-link").forEach((t) => {
       t.addEventListener("click", (s) => {
         s.preventDefault();
-        const i = t.getAttribute("href").substring(1), c = document.getElementById(i);
-        c && c.scrollIntoView({ behavior: "smooth" });
+        const i = t.getAttribute("href").substring(1), r = document.getElementById(i);
+        r && r.scrollIntoView({ behavior: "smooth" });
       });
     });
   }
@@ -586,7 +589,7 @@ class C extends HTMLElement {
   }
 }
 customElements.get("qc-up") || customElements.define("qc-up", C);
-class k extends HTMLElement {
+class q extends HTMLElement {
   static get observedAttributes() {
     return ["titre", "medias", "theme"];
   }
@@ -627,8 +630,8 @@ class k extends HTMLElement {
     this.innerHTML = this.template;
   }
 }
-customElements.get("qc-social") || customElements.define("qc-social", k);
-class q extends HTMLElement {
+customElements.get("qc-social") || customElements.define("qc-social", q);
+class k extends HTMLElement {
   constructor() {
     super(), this.toggleButton = this.querySelector(".accordion-toggle"), this.content = this.toggleButton.nextElementSibling, this.toggleButton.setAttribute("aria-expanded", "false"), this.content.setAttribute("aria-hidden", "true"), this.content.style.display = "none", this.toggleButton.addEventListener("click", () => this.toggleContent());
   }
@@ -640,12 +643,12 @@ class q extends HTMLElement {
     document.querySelectorAll("qc-accordeon").forEach((t) => {
       const s = t.querySelector(".accordion-toggle"), i = s.nextElementSibling;
       s.setAttribute("aria-expanded", "false"), i.setAttribute("aria-hidden", "true"), i.style.display = "none";
-      const c = s.querySelector(".lnr");
-      c.classList.remove("lnr-chevron-up"), c.classList.add("lnr-chevron-down");
+      const r = s.querySelector(".lnr");
+      r.classList.remove("lnr-chevron-up"), r.classList.add("lnr-chevron-down");
     });
   }
 }
-customElements.get("qc-accordeon") || customElements.define("qc-accordeon", q);
+customElements.get("qc-accordeon") || customElements.define("qc-accordeon", k);
 class L extends HTMLElement {
   constructor() {
     super(), this.attachShadow({ mode: "open" }), this.render();
@@ -686,8 +689,8 @@ class L extends HTMLElement {
     const e = this.shadowRoot.querySelector("nav"), t = this.querySelectorAll("ul");
     e.setAttribute("role", "navigation"), e.setAttribute("aria-label", "Navigation principale"), t.forEach((s, i) => {
       s.setAttribute("role", "menubar");
-      const c = s.children;
-      Array.from(c).forEach((n, E) => {
+      const r = s.children;
+      Array.from(r).forEach((n, S) => {
         n.setAttribute("role", "none");
         const l = n.querySelector("a"), a = n.querySelector("button"), o = n.querySelector("ul");
         l && l.setAttribute("role", "menuitem"), a && (a.classList.add("submenu-toggle"), a.setAttribute("aria-haspopup", "true"), a.setAttribute("aria-expanded", "false"), a.setAttribute("aria-label", "Développer le sous-menu"), a.nextElementSibling.setAttribute("role", "menu")), o && (o.classList.add("submenu"), o.setAttribute("aria-label", `Sous-menu ${l ? l.textContent.trim() : "sans titre"}`));
@@ -730,7 +733,7 @@ class L extends HTMLElement {
   }
 }
 customElements.get("qc-navigation") || customElements.define("qc-navigation", L);
-class M extends HTMLElement {
+class E extends HTMLElement {
   static get observedAttributes() {
     return ["arialabel"];
   }
@@ -779,4 +782,54 @@ class M extends HTMLElement {
         `;
   }
 }
-customElements.get("qc-ariane") || customElements.define("qc-ariane", M);
+customElements.get("qc-ariane") || customElements.define("qc-ariane", E);
+class M extends HTMLElement {
+  static get observedAttributes() {
+    return ["label"];
+  }
+  constructor() {
+    super(), this.render();
+  }
+  attributeChangedCallback(e, t, s) {
+    t !== s && this.render();
+  }
+  get template() {
+    return `
+        <div class="qc-tag">
+            ${this.tag}
+        </div>
+    `;
+  }
+  get label() {
+    return this.getAttribute("label") || "Étiquette";
+  }
+  render() {
+    this.innerHTML = this.template;
+  }
+}
+customElements.get("qc-etiquette") || customElements.define("qc-etiquette", M);
+class $ extends HTMLElement {
+  static get observedAttributes() {
+    return ["tag"];
+  }
+  attributeChangedCallback(e, t, s) {
+    t !== s && this.render();
+  }
+  constructor() {
+    super(), this.render();
+  }
+  get template() {
+    return `
+            <div class="qc-tag">
+                ${this.tag}
+            </div>
+        `;
+  }
+  get tag() {
+    return this.getAttribute("tag");
+  }
+  render() {
+    this.innerHTML = this.template;
+  }
+}
+customElements.get("qc-tag") || customElements.define("qc-tag", $);

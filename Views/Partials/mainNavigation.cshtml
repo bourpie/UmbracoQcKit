@@ -3,18 +3,25 @@
 @{
     var siteSettings = Model.GetSiteSettings();
     if (siteSettings is null) return;
+
+    var estFrancais = Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName == "fr";
+    var path = estFrancais ? "/en" : "/";
+    var langueLabel = estFrancais ? "English" : "Fran&ccedil;ais"; // Todo : ajouter aux paramètres du site
+    var actionUrl = estFrancais ? "/recherche/" : "/en/search/"; // Todo : ajouter aux paramètres du site
+    var contactLabel = estFrancais ? "Nous joindre" : "Contact Us"; // Todo : ajouter aux paramètres du site
+    var contacturl = estFrancais ? "/contact" : "/en/contact";// Todo : ajouter aux paramètres du site
+    var searchLabel = estFrancais ? "Rechercher" : "Search";// Todo : ajouter aux paramètres du site
 }
 
 <qc-header titre="@siteSettings.SiteName"
-  btnlabel="Rechercher"
-  contacturl="/contact"
-  contactlabel="Nous joindre"
-  langueurl="/en"
-  languelabel="English"
-  action="/search"
-  name="query"
-  query=""
->
+           btnlabel="@searchLabel"
+           placeholder="@searchLabel"
+           contacturl="@contacturl"
+           contactlabel="@contactLabel"
+           langueurl="@path"
+           langueLabel="@langueLabel"
+           name="query"
+           action="@actionUrl">
 </qc-header>
 
 <qc-navigation>
@@ -22,3 +29,4 @@
         @await Html.GetBlockGridHtmlAsync(siteSettings, "mainNavigation")
     </ul>
 </qc-navigation>
+

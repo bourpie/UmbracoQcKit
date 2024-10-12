@@ -1,3 +1,21 @@
-﻿<div class="text" ng-click="block.edit()" ng-focus="block.focus">
+﻿<style>
+
+    .sous-titre {
+        box-sizing: border-box;
+        color: rgb(34, 54, 84);
+        font-weight: 300;
+        line-height: 31.5px;
+        margin-bottom: 0px;
+        margin-top: 16px;
+        font-size: 21px;
+        font-family: Roboto, sans-serif;
+        text-align: start;
+        text-size-adjust: 100%;
+        background-color: rgb(255, 255, 255);
+    }
+</style>
+
+<div class="text" ng-click="block.edit()" ng-focus="block.focus">
     <h1>{{block.data.title}}</h1>
+    <p class="sous-titre">{{block.data.subtitle}}</p>
 </div>

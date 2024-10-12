@@ -1,0 +1,25 @@
+﻿@using Umbraco.Cms.Core.Models.PublishedContent
+@using Umbraco.Cms.Core.Web
+@using Umbraco.Extensions
+@using Umbraco.Cms.Core.Models
+@using System.Threading
+@inject IUmbracoContextAccessor UmbracoContextAccessor
+
+@{
+    var umbracoContext = UmbracoContextAccessor.GetRequiredUmbracoContext();
+    var rootNode = umbracoContext?.Content?.GetAtRoot().FirstOrDefault();
+    var CurrentPage = umbracoContext?.PublishedRequest?.PublishedContent;
+}
+
+@if (CurrentPage != null && CurrentPage.Ancestors().Any())
+{
+    <qc-ariane>
+        <ol>
+            @foreach (var lien in CurrentPage.Ancestors().OrderBy(x => x.Level))
+            {
+                <li><a href="@lien.Url()">@lien.Name</a></li>
+            }
+            <li aria-current="page">@CurrentPage.Name</li>
+        </ol>
+    </qc-ariane>
+}

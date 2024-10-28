@@ -6,6 +6,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="App_Plugins\BlockGridPreviews\richtext.html" />
+    <Content Include="App_Plugins\BlockGridPreviews\section.html" />
     <Content Include="App_Plugins\BlockGridPreviews\titrePage.html" />
     <Content Include="App_Plugins\BlockGridPreviews\title.html" />
     <Content Include="App_Plugins\BlockGridPreviews\imageLink.html" />

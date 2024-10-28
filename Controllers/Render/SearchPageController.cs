@@ -39,7 +39,10 @@ public class SearchPageController(
 
         var pageSize = _umbracoQcKitConfig?.SearchSettings?.PageSize ?? Constants.Search.DefaultPageSize;
 
-        var searchRequest = new SearchRequestModel(query, page, pageSize, tags, allTags);
+        // Récupération de la culture courante
+        var culture = httpContext?.Request.Query["culture"] ?? Thread.CurrentThread.CurrentCulture.Name;
+
+        var searchRequest = new SearchRequestModel(query, page, pageSize, tags, allTags, culture);
 
         var searchResponse = searchService.Search(searchRequest);
 
@@ -61,4 +64,5 @@ public class SearchPageController(
 
         return CurrentTemplate(model);
     }
+
 }

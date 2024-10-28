@@ -10,31 +10,12 @@
                 var contentArea = Model.Areas.ElementAt(CONTENT_AREA);
                 if (contentArea != null && contentArea.Any())
                 {
-                    var classToApply = "";
-                    var itemCount = contentArea.Count;
-                    var i = 0;
                     foreach (var item in contentArea)
                     {
-                        if (itemCount > 1)
-                        {
-                            if (itemCount > 1 && i % 2 == 1)
-                            {
-                                classToApply = "me-auto";
-                            }
-                            else
-                            {
-                                classToApply = "ms-auto";
-                            }
-                        }
-                        else
-                        {
-                            classToApply = "mx-auto";
-                        }
 
-                        <div class="col-lg-@item.ColumnSpan @(classToApply)">
+                        <div class="col-lg-@item.ColumnSpan">
                             @await Html.PartialAsync("blockgrid/Components/richText", item)
                         </div>
-                        i++;
                     }
                 }
             }

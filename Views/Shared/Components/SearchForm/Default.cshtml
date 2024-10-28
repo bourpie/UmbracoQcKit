@@ -14,7 +14,9 @@
             var i = 0;
             @foreach (var tag in Model.AllTags)
             {
+                <qc-tag label="@tag.Text" type="checkbox" checked="@(tag.Selected ? "selected" : null)"></qc-tag>
                 <div class="form-check">
+                    
                     <input class="form-check-input" type="checkbox" name="SelectedTags" id="@($"SelectedTags_{i}")" value="@(tag.Value)" checked="@(tag.Selected ? "selected" : null)" />
                     <label class="form-check-label" for="@($"SelectedTags_{i}")">@tag.Text</label>
                 </div>

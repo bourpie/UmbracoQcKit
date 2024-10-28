@@ -20,7 +20,6 @@ public class SearchService : ISearchService
     public SearchService(IExamineManager examineManager)
     {
         _examineManager = examineManager ?? throw new ArgumentNullException(nameof(examineManager));
-
     }
 
     public SearchResponseModel Search(SearchRequestModel searchRequest)
